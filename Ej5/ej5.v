@@ -24,3 +24,13 @@ module BinaryMultiplier(input [0:3]X, [0:3]Y, output [0:8]Z)
 
 
 endmodule
+
+/*
+    Decisiones tomadas:
+        1. Se podría haber hecho la entrada para números BCD de n dígitos, pero hubiera implicado complicar
+            demasiado las cosas ya que haría falta antes del multiplicador, un conversor de BCD a binario
+            que para el caso de 1 dígito no es necesario
+        2. Los módulos armados no son ni muy complicados ni básicos en exceso. Por ejemplo, se podría haber
+            hecho todo en un sólo módulo o para sumar(...)    
+
+*/
