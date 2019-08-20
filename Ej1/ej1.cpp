@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <math.h>
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
+#include <cmath>
 
 int main(int argc, char *argv[])
 {
@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     if(argc != 4)
     {
         // Not enough input to compute a result
-        printf("ERROR\n");
+        std::cout << "ERROR\n";
         return 0;
     }
     else
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
                 if(argv[i][j] < '0' || argv[i][j] > '9')
                 {  
                     // Recibi algo que no es un numero
-                    printf("ERROR\n");
+                    std::cout << "ERROR\n";
                     return 0;
                 }
             }
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
         ran += pow(2, i);
     }
     
-    printf("Res: %f | Ran %f\n", res, ran);
+    std::cout << "Res: " << res << " | Ran: " << ran << std::endl;
     return 0;
 
 }
