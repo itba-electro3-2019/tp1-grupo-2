@@ -1,0 +1,51 @@
+\subsubsection{Resoluci\'on mediante algebra booleana}
+\vspace{5mm}
+\noindent
+La expresi\'on obtenida por los minterminos dados es la siguiente:\\
+
+$f(A,B,C,D,E) =  \overline{A}.\overline{B}.\overline{C}.\overline{D}.\overline{E} + \overline{A}.\overline{B}.\overline{C}.D.\overline{E} +
+\vspace{5mm}\overline{A}.\overline{B}.C.\overline{D}.\overline{E} + \overline{A}.\overline{B}.C.D.E + \overline{A}.B.\overline{C}.\overline{D}.\overline{E} + \overline{A}.B.\overline{C}.D.\overline{E} + \vspace{5mm}\overline{A}.B.C.\overline{D}.\overline{E} + A.\overline{B}.\overline{C}.\overline{D}.\overline{E} + A.\overline{B}.\overline{C}.D.\overline{E} + A.\overline{B}.C.\overline{D}.\overline{E} + A.\overline{B}.C.D.E + A.B.\overline{C}.\overline{D}.\overline{E} + A.B.\overline{C}.\overline{D}.E + A.B.\overline{C}.D.\overline{E} + A.B.\overline{C}.D.E + A.B.C.\overline{D}.\overline{E} $
+\vspace{5mm}
+
+\noindent
+Aplicando simplificaci\'ones del algebra booleana se puede reducir la expresi\'on:\\
+
+$f(A,B,C,D,E) =  \overline{A}.\overline{B}.\overline{C}.\overline{D}.\overline{E} + \overline{A}.\overline{B}.\overline{C}.D.\overline{E} +
+\vspace{5mm}\overline{A}.\overline{B}.C.\overline{D}.\overline{E} + \overline{A}.\overline{B}.C.D.E + \overline{A}.B.\overline{C}.\overline{D}.\overline{E} + \overline{A}.B.\overline{C}.D.\overline{E} + \vspace{5mm}\overline{A}.B.C.\overline{D}.\overline{E} + A.\overline{B}.\overline{C}.\overline{D}.\overline{E} + A.\overline{B}.\overline{C}.D.\overline{E} + A.\overline{B}.C.\overline{D}.\overline{E} + A.\overline{B}.C.D.E + A.B.\overline{C}.\overline{D}.\overline{E} + A.B.\overline{C}.\overline{D}.E + A.B.\overline{C}.D.\overline{E} + \vspace{5mm}A.B.\overline{C}.D.E + A.B.C.\overline{D}.\overline{E} + \textcolor{red}{A.\overline{B}.\overline{C}.\overline{D}.\overline{E} +
+A.B.\overline{C}.\overline{D}.\overline{E} + \overline{A}.\overline{B}.\overline{C}.\overline{D}.\overline{E} + A.B.\overline{C}.D.\overline{E} + \overline{A}.B.\overline{C}.\overline{D}.\overline{E} + A.B.\overline{C}.\overline{D}.\overline{E}}$
+\vspace{5mm}\par
+
+\noindent
+De aqu\'i utilizando la propiedad de absorci\'on \par
+\vspace{5mm}
+
+$f(A,B,C,D,E) =  \color{red}{\overline{A}.\overline{B}.\overline{C}.\overline{D}.\overline{E}} + \overline{A}.\overline{B}.\overline{C}.D.\overline{E} +
+\vspace{5mm}\color{green}{\overline{A}.\overline{B}.C.\overline{D}.\overline{E}} + \color{blue}{\overline{A}.\overline{B}.C.D.E} + \color{yellow}{\overline{A}.B.\overline{C}.\overline{D}.\overline{E}} + \color{pink}{\overline{A}.B.\overline{C}.D.\overline{E}} + \vspace{5mm}\color{violet}{\overline{A}.B.C.\overline{D}.\overline{E}} + \color{brown}{A.\overline{B}.\overline{C}.\overline{D}.\overline{E}} + A.\overline{B}.\overline{C}.D.\overline{E} + \color{orange}{A.\overline{B}.C.\overline{D}.\overline{E}} + \color{blue}{A.\overline{B}.C.D.E} + \color{yellow}{A.B.\overline{C}.\overline{D}.\overline{E}} + \color{gray}{A.B.\overline{C}.\overline{D}.E} + \color{cyan}{A.B.\overline{C}.D.\overline{E}} + \color{gray}{A.B.\overline{C}.D.E} + \vspace{5mm}\color{orange}{A.B.C.\overline{D}.\overline{E}} + \color{magenta}{A.\overline{B}.\overline{C}.\overline{D}.\overline{E}} +
+A.B.\overline{C}.\overline{D}.\overline{E} + \color{green}{\overline{A}.\overline{B}.\overline{C}.\overline{D}.\overline{E}} + \color{pink}{A.B.\overline{C}.D.\overline{E}} + \color{violet}{\overline{A}.B.\overline{C}.\overline{D}.\overline{E}} + \color{cyan}{A.B.\overline{C}.\overline{D}.\overline{E}}$
+\vspace{8mm}\par
+$
+\color{black}{f(A,B,C,D,E) =}  \color{red}{\overline{A}.\overline{B}.\overline{C}.\overline{E}} +
+\vspace{5mm}\color{green}{\overline{A}.\overline{B}.\overline{D}.\overline{E}} + \color{blue}{\overline{B}.C.D.E} + \color{yellow}{B.\overline{C}.\overline{D}.\overline{E}} + \color{pink}{B.\overline{C}.D.\overline{E}} + \color{violet}{\overline{A}.B.\overline{D}.\overline{E}} + \color{brown}{A.\overline{B}.\overline{C}.\overline{E}} + \color{orange}{A.C.\overline{D}.\overline{E}} + \color{gray}{A.B.\overline{C}.E} + \color{cyan}{A.B.\overline{C}.\overline{E}} + \color{magenta}{A.\overline{C}.\overline{D}.\overline{E}}$
+\vspace{8mm}\par
+$
+\color{black}{f(A,B,C,D,E) =}  \overline{A}.\overline{B}.\overline{C}.\overline{E} +
+\vspace{5mm}\overline{A}.\overline{B}.\overline{D}.\overline{E} + \overline{B}.C.D.E + B.\overline{C}.\overline{D}.\overline{E} + B.\overline{C}.D.\overline{E} + \overline{A}.B.\overline{D}.\overline{E} + A.\overline{B}.\overline{C}.\overline{E} + A.C.\overline{D}.\overline{E} + A.B.\overline{C}.E + A.B.\overline{C}.\overline{E} + A.\overline{C}.\overline{C}.\overline{E}$
+\vspace{8mm}\par
+$
+\color{black}{f(A,B,C,D,E) =}  \color{red}{\overline{A}.\overline{B}.\overline{C}.\overline{E}} +
+\vspace{5mm}\color{green}{\overline{A}.\overline{B}.\overline{D}.\overline{E}} + \color{black}{\overline{B}.C.D.E} + \color{blue}{B.\overline{C}.\overline{D}.\overline{E} + B.\overline{C}.D.\overline{E}} + \color{green}{\overline{A}.B.\overline{D}.\overline{E}} + \color{red}{A.\overline{B}.\overline{C}.\overline{E}} + \color{magenta}{A.C.\overline{D}.\overline{E}} + \color{cyan}{A.B.\overline{C}.E + A.B.\overline{C}.\overline{E}} + \color{magenta}{A.\overline{C}.\overline{D}.\overline{E}}$
+\vspace{8mm}\par
+$
+\color{black}{f(A,B,C,D,E) =}  \color{red}{\overline{B}.\overline{C}.\overline{E}} + \color{green}{\overline{A}.\overline{D}.\overline{E}} + \color{black}{\overline{B}.C.D.E} + \color{blue}{B.\overline{C}.\overline{E}} + \color{magenta}{A.\overline{D}.\overline{E}} + \color{cyan}{A.B.\overline{C}}$
+\vspace{8mm}\par
+$
+\color{black}{f(A,B,C,D,E) =}  \overline{B}.\overline{C}.\overline{E} + \overline{A}.\overline{D}.\overline{E} + \overline{B}.C.D.E + B.\overline{C}.\overline{E} + A.\overline{D}.\overline{E} + A.B.\overline{C}$
+\vspace{8mm}\par
+$
+\color{black}{f(A,B,C,D,E) =}  \color{red}{\overline{B}.\overline{C}.\overline{E}} + \color{blue}{\overline{A}.\overline{D}.\overline{E}} + \color{black}{\overline{B}.C.D.E} + \color{red}{B.\overline{C}.\overline{E}} + \color{blue}{A.\overline{D}.\overline{E}} + \color{black}{A.B.\overline{C}}$
+\vspace{8mm}\par
+\noindent
+\color{black}Finalmente, la expresi\'on hallada es:\par\vspace{5mm}
+
+$f(A,B,C,D,E) =  \overline{C}.\overline{E} + \overline{D}.\overline{E} + \overline{B}.C.D.E + A.B.\overline{C}$
+\vspace{8mm}\par

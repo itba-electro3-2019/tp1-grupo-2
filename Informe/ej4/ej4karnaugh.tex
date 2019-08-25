@@ -1,0 +1,111 @@
+
+\subsection{Desarrollo de los mapas de Karnaugh de las salidas}
+\noindent
+Para los siguientes mapas se utiliz\'o la misma convenci\'on que para la tabla de verdad. De esta forma el orden es A-B-C-D siendo A el bit m\'as significativo y D el bit menos significativo.
+
+%Empty Karnaugh map 4x4
+\newenvironment{Karnaugh2}%
+{
+\begin{tikzpicture}[baseline=(current bounding box.north),scale=0.8]
+\draw (0,0) grid (4,4);
+\draw (0,4) -- node [pos=0.7,above right,anchor=south west] {AB} node [pos=0.7,below left,anchor=north east] {CD} ++(135:1);
+%
+\matrix (mapa) [matrix of nodes,
+        column sep={0.8cm,between origins},
+        row sep={0.8cm,between origins},
+        every node/.style={minimum size=0.3mm},
+        anchor=8.center,
+        ampersand replacement=\&] at (0.5,0.5)
+{
+                       \& |(c00)| 00         \& |(c01)| 01         \& |(c11)| 11         \& |(c10)| 10         \& |(cf)| \phantom{00} \\
+|(r00)| 00             \& |(0)|  \phantom{0} \& |(1)|  \phantom{0} \& |(3)|  \phantom{0} \& |(2)|  \phantom{0} \&                     \\
+|(r01)| 01             \& |(4)|  \phantom{0} \& |(5)|  \phantom{0} \& |(7)|  \phantom{0} \& |(6)|  \phantom{0} \&                     \\
+|(r11)| 11             \& |(12)| \phantom{0} \& |(13)| \phantom{0} \& |(15)| \phantom{0} \& |(14)| \phantom{0} \&                     \\
+|(r10)| 10             \& |(8)|  \phantom{0} \& |(9)|  \phantom{0} \& |(11)| \phantom{0} \& |(10)| \phantom{0} \&                     \\
+|(rf) | \phantom{00}   \&                    \&                    \&                    \&                    \&                     \\
+};
+}%
+{
+\end{tikzpicture}
+}
+
+\begin{center}
+Mapa de Karnaugh para $Y_0$
+
+\begin{Karnaugh2}
+    \centering
+    \minterms{3,2,7,6,10,11,14,15}
+    \maxterms{0,1,12,13,4,5,9,8}
+    \implicant{3}{10}{red}
+\end{Karnaugh2}
+\end{center}
+
+\noindent
+Mediante la observaci\'on del mapa y teniendo en cuenta que para el conjunto marcado en rojo tanto B, como C y como D cambian de valor (entre 0 y 1) se pudo concluir que la expresi\'on m\'as simplificada para $Y_0$ es:
+\begin{equation}
+    Y_0 = A
+    \label{ecy0}
+\end{equation}
+
+\begin{center}
+Mapa de Karnaugh para $Y_1$
+
+\begin{Karnaugh2}
+    \centering
+    \minterms{1,2,5,6,13,14,9,10}
+    \maxterms{0,11,3,4,7,8,12,15}
+    \implicant{1}{9}{magenta}
+    \implicant{2}{10}{yellow}
+\end{Karnaugh2}
+\end{center}
+
+\noindent
+En este caso, al realizar un an\'alisis del mapa se pudieron apreciar dos grupos (marcados en magenta y amarillo). Dentro del primer conjunto (magenta) sucede un cambio en los valores de C y D, manteniendose A en 0 y B en 1. Con respecto al segundo grupo (amarillo) C y D nuevamente toman distintos valores, mientras que A se mantiene en 1 y B en 0. Como conclusi\'on, la expresi\'on m\'as simplificada para $Y_1$ es: 
+\begin{equation}
+    Y_1 = \overline{A}.B
+ + A.\overline{B}
+ \label{ecy1}
+\end{equation}
+
+\begin{center}
+Mapa de Karnaugh para $Y_2$
+
+\begin{Karnaugh2}
+    \centering
+    \minterms{1,3,5,7,12,14,8,10}
+    \maxterms{0,2,4,6,9,11,13,15}
+    \implicant{1}{7}{blue}
+    \implicant{14}{10}{gray}
+    \implicant{12}{8}{gray}
+\end{Karnaugh2}
+\end{center}
+
+\noindent
+Con el fin de obtener la expresi\'on m\'as simplificada para $Y_2$ se distinguieron 2 grupos en el mapa. Para el caso del grupo azul, B se mantiene con el valor 1 y C con el valor 0 mientras que A y D cambian. Por otra parte, examinando el conjunto gris, se cumple que B vale 0 y C vale 1, siendo las \'unicas variables que no cambian su valor. De esta forma, la expresi\'on queda:
+\begin{equation}
+    Y_2 = B.\overline{C}
+ + \overline{B}.C
+ \label{ecy2}
+\end{equation}
+\begin{center}
+Mapa de Karnaugh para $Y_3$
+
+\begin{Karnaugh2}
+    \centering
+    \minterms{4,5,7,6,8,9,11,10}
+    \maxterms{0,2,1,3,12,14,13,15}
+    \implicant{4}{6}{brown}
+    \implicant{8}{10}{green}
+\end{Karnaugh2}
+\end{center}
+
+\noindent
+Por \'ultimo, tienendo en cuenta que: dentro del grupo marr\'on C vale 0 y D, 1; en el grupo verde, C es constantemente 1 y D, 0 -siendo las \'unicas variables que mantienen su valor en cada caso-, para $Y_3$ la expresi\'on m\'as simplificada es: 
+ \begin{equation}
+ Y_3 = \overline{C}.D
+ + C.\overline{D}
+     \label{ecy3}
+ \end{equation}
+
+\noindent
+Por otra parte, analizando todas las expresiones se puede apreciar que, excluyendo la entrada A y la salida $Y_0$, el resto de las salidas son el resultado de ingresar 2 entradas a una compuerta XOR. Este hecho se puede pensar como dicha operaci\'on (XOR) es la que se realiza entre cada bit binario de la entrada y su bit inmediantamente anterior (m\'as significativo) para formar cada bit del n\'umero expresado por c\'odigo de Gray - exceptuando el primer bit ya que toman el mismo valor independientemente del resto-.
