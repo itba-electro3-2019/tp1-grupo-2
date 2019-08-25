@@ -34,13 +34,16 @@ int main(int argc, char *argv[])
     if( (strlen(argv[1]) > 1) || (argv[1][0] < '0') || (argv[1][0] > '1') )
     {
         std::cout << "ERROR\n";
-	return 0;
+	    return 0;
     }
-    //fin de la validacion
-    
-    //int signo = atoi(argv[1]);
     int entero = atoi(argv[2]);
     int decimal = atoi(argv[3]);
+    if(entero > 24 || decimal > 127)
+    {   //Limitaciones de c++
+        std::cout << "ERROR\n";
+	    return 0;
+    }
+    //fin de la validacion
     double res = 0;
     double ran = 0;
     // Calculo la resolucion 
