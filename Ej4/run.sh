@@ -1,3 +1,2 @@
-iverilog ej4circuit.v
-vvp a.out
-rm a.out
+iverilog ej4test_bench.v ej4circuit.v
+./src/a.out
