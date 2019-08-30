@@ -1,0 +1,15 @@
+\subsection{Implementaci\'on en Verilog}
+\noindent
+En la presente secci\'on se explicita como fue el razonamiento l\'ogico llevado a cabo para la implementaci\'on del circuito en Verilog. Para realizar dicha tarea, se decidi\'o desarrollar un archivo con el m\'odulo principal del circuito y otro archivo con un banco de pruebas.
+
+\noindent
+Con respecto al archivo encargado del funcionamiento, lo primero que se realiz\'o fue observar las expresiones de las salidas del circuito para comprender de que manera relacionarlas con la entrada. Al ser 4 entradas y 4 salidas donde cada una representa un nibble, en Verilog se utilizaron arreglos de 4 bits para trabajar sobre ellas. Se define un arreglo como input y luego el otro como output. Por esta raz\'on, se debe tener en cuenta que de las salidas de la convenci\'on utilizada anteriormente, $Y_0$ ser\'a el bit 3 del arreglo de salida y $Y_3$ ser\'a el bit 0.
+
+\noindent
+A continuaci\'on, y teniendo en cuenta que $Y_0$ toma el valor de A y que ambos son el bit m\'as significativo de la salida y entrada respectivamente, se igual el bit 3 del arreglo de salida al bit 3 del arreglo de entrada.
+
+\noindent
+Como ya fue mencionado, el resto de las salidas pueden ser entendidas como el resultado de una compuerta XOR entre el bit de entrada en la misma posici\'on que el de salida y el de entrada en una posici\'on anterior (m\'as significativo). Este razonamiento se lleva a cabo con las 3 expresiones restantes, siendo estas muy simples al hacer uso de la operaci\'on $'\wedge'$ (XOR) de Verilog. As\'i, por ejemplo, el bit 1 de salida ($Y_2$) depende de un XOR entre el bit 1 y 2 de entrada (B y C).
+
+\noindent
+En relaci\'on al banco de pruebas, se utiliz\'o otro archivo .v donde a una entrada de 4 bits se analiza la salida resultante. Este proceso se realiza en el banco para todos los numeros binarios de 4 bits a la entrada y observando si la salida es su correspondiente c\'odigo de Gray. El resultado fue exitoso en todos los casos.

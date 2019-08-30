@@ -1,0 +1,44 @@
+\noindent
+Con el fin de convertir un número binario de 4 bits en su equivalente en código de Gray, se plantearon todas las posibilidades en la siguiente tabla de verdad, donde $Y_0$, $Y_1$, $Y_2$ e $Y_3$ representan las correspondientes salidas y A, B, C y D las entradas del sistema. Ambas se encuentran mostradas en forma ordenada, tomando $Y_0$ como el bit m\'as significativo y $Y_3$ como el bit menos significativo. De la misma forma, para las entradas, A reprensenta el bit m\'as significativo y D el menos significativo.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|cccc|cccc|}
+\hline
+
+\multicolumn{1}{|c|}{A} & \multicolumn{1}{c|}{B}   & \multicolumn{1}{c|}{C}   & D                        & \multicolumn{1}{c|}{$Y_0$}   & \multicolumn{1}{c|}{$Y_1$}   & \multicolumn{1}{c|}{$Y_2$}   & $Y_3$                        \\ \hline
+\rowcolor[HTML]{34FF34} 
+0                       & 0                        & 0                        & 0                        & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 \\
+\rowcolor[HTML]{34FF34} 
+0                       & 0                        & 0                        & 1                        & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 \\
+\rowcolor[HTML]{34FF34} 
+0                       & 0                        & 1                        & 0                        & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 \\
+\rowcolor[HTML]{34FF34} 
+0                       & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 1} & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 \\
+\rowcolor[HTML]{34FF34} 
+0                       & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 0} & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 \\
+\rowcolor[HTML]{34FF34} 
+0                       & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 1} & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 \\
+\rowcolor[HTML]{34FF34} 
+0                       & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 0} & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 \\
+\rowcolor[HTML]{34FF34} 
+0                       & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 1} & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 \\
+\rowcolor[HTML]{34FF34} 
+1                       & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 0} & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 \\
+\rowcolor[HTML]{34FF34} 
+1                       & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 1} & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 \\
+\rowcolor[HTML]{34FF34} 
+1                       & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 0} & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 \\
+\rowcolor[HTML]{34FF34} 
+1                       & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 1} & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 \\
+\rowcolor[HTML]{34FF34} 
+1                       & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 0} & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 \\
+\rowcolor[HTML]{34FF34} 
+1                       & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 0} & {\color[HTML]{333333} 1} & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}1 \\
+\rowcolor[HTML]{34FF34} 
+1                       & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 0} & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}1 \\
+\rowcolor[HTML]{34FF34} 
+1                       & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 1} & {\color[HTML]{333333} 1} & \cellcolor[HTML]{FD6864}1 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0 & \cellcolor[HTML]{FD6864}0
+\end{tabular}
+\caption{\label{tab:truth_table}Tabla de verdad}
+\end{table}
