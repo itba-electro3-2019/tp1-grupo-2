@@ -3,6 +3,7 @@ module main;
     wire [0:7]res;
     BCDMultiplier dut(num1, num2, res);
     integer i,j;
+    reg [0:3] dig1, dig2;
     initial
         begin
             //$monitor("Out has changed! %d * %d = %h", num1,  num2, res);       
@@ -12,10 +13,16 @@ module main;
                         begin
                             num1 = i;
                             num2 = j;
-                            $display("Out has changed! %d * %d = %h", num1,  num2, res);
+                            //$display("Input: %d * %d", num1,  num2);
+                            #1;
                         end     
                 end         
             $finish;
         end
+
+    always @(res) begin
+        //$monitor("Out: %h", res );
+        $monitor("%d * %d = %h", num1, num2, res);
+    end    
     
 endmodule    

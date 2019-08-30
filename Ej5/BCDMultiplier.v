@@ -9,17 +9,17 @@ module BCDMultiplier(BCDNum1, BCDNum2, BCDRes);
     
     input [0:3]BCDNum1, BCDNum2;
     output [0:7]BCDRes;
-    reg unsigned [0:7]binRes;    //aqui se guardara el resultado en binario de la multiplicacion
-    //reg digit1, digit2;
-    wire [0:11]bcdAux;  
+    reg unsigned [0:6]binRes;    //aqui se guardara el resultado en binario de la multiplicacion
+    reg [0:3] digit1, digit2;
+    //wire [0:11]bcdAux;  
+    //Bin2BCD converter(binRes, BCDRes);
+    assign BCDRes = {digit1, digit2} ;    
     always @(BCDNum1,BCDNum2)
         begin
             binRes = BCDNum1*BCDNum2;
+            digit1 = (binRes - binRes%10) / 10;
+            digit2 = binRes % 10;    
         end
-    //assign binRes = BCDNum1*BCDNum2;   //el resultado será de máximo 7 bits
-    Binary2BCD converter(binRes,bcdAux);
-    assign BCDRes = bcdAux[3:11];
-
 endmodule
 
 
