@@ -16,9 +16,18 @@ module BCDMultiplier(BCDNum1, BCDNum2, BCDRes);
     assign BCDRes = {digit1, digit2} ;    
     always @(BCDNum1,BCDNum2)
         begin
-            binRes = BCDNum1*BCDNum2;
-            digit1 = (binRes - binRes%10) / 10;
-            digit2 = binRes % 10;    
+            digit1 = 0;
+            digit2 = 0;
+            if(BCDNum1 > 9)
+                digit1 = 'hf;
+            if(BCDNum2 > 9)
+                digit2 = 'hf;
+            if ( (digit1 == 0) & (digit2 == 0) )
+            begin    
+                binRes = BCDNum1*BCDNum2;
+                digit1 = (binRes - binRes%10) / 10;
+                digit2 = binRes % 10;    
+            end 
         end
 endmodule
 

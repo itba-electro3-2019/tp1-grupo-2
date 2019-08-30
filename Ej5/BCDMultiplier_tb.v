@@ -7,9 +7,9 @@ module main;
     initial
         begin
             //$monitor("Out has changed! %d * %d = %h", num1,  num2, res);       
-            for(i = 0 ; i < 10 ; i = i + 1)
+            for(i = 0 ; i < 16 ; i = i + 1)
                 begin
-                   for(j = 0 ; j < 10 ; j = j + 1)
+                   for(j = 0 ; j < 16 ; j = j + 1)
                         begin
                             num1 = i;
                             num2 = j;
