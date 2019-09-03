@@ -22,17 +22,3 @@ module BCDMultiplier(BCDNum1, BCDNum2, BCDRes, validation);
             digit2 = binRes % 10;    
         end
 endmodule
-
-
-/*
-    Decisiones tomadas:
-        1. Se podría haber hecho la entrada para números BCD de n dígitos, pero hubiera implicado complicar
-            demasiado las cosas ya que haría falta antes del multiplicador, un conversor de BCD a binario
-            que para el caso de 1 dígito no es necesario.
-        2. Los módulos armados no son ni muy complicados ni básicos en exceso. Por ejemplo, se podría haber
-            hecho todo en un sólo módulo o para sumar(...)    
-        3. El módulo de binary2BCD devuelve 3 dígitos porque era lo mismo hacerlo para 2 o 3, mejor tener mas generalidad
-        4. Los nombres de los parametros de los modulos tienen explicitamente su codificacion (BCD, 
-            binario) para mayor claridad.
-
-*/
