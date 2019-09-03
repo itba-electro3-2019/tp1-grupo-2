@@ -15,7 +15,6 @@ begin
     #1 in = 0;
     #1 sel = 1;
     #1 in = 1;
-    #1 in = 0;
     #1 sel = 3;
     #1 in = 0;
     #1 sel = 3;
