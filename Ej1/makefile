@@ -22,20 +22,15 @@ rm       = rm -f
 $(BINDIR)/$(TARGET): $(OBJECTS)
 	@mkdir -p bin
 	@$(LINKER) $(OBJECTS) $(LFLAGS) -o $@
-	@echo "Linking complete!"
-	@./test.sh
-	@$(rm) $(OBJECTS)
-	@echo "Cleanup complete!"
-	@$(rm) $(BINDIR)/$(TARGET)
-	@echo "Executable removed!"
-	@$(rm) -rf $(BINDIR)
-	@$(rm) -rf $(OBJDIR)
-
+	@echo "Linking complete!":
+	
 $(OBJECTS): $(OBJDIR)/%.o : %.cpp
 	@mkdir -p obj
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "Compiled "$<" successfully!"
 
+test: $(BINDIR)/$(TARGET)
+	
 compile: $(OBJECTS)
 	@mkdir -p bin
 	@$(LINKER) $(OBJECTS) $(LFLAGS) -o $(BINDIR)/$(TARGET)
