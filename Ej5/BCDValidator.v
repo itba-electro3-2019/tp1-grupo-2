@@ -7,5 +7,5 @@
 module BCDValidator(BCDNum, out);
     input [0:3]BCDNum;
     output out;
-    assign out = (BCDNum[0]&&BCDNum[1]) || (BCDNum[0]&&BCDNum[2]);  //out = 1 si BCDNum > 9. Se podría haber escrito también BCDNum > 9.          
+    assign out = (BCDNum[0] & BCDNum[1]) | (BCDNum[0] & BCDNum[2]);  //out = 1 si BCDNum > 9. Se podría haber escrito también BCDNum > 9.          
 endmodule
