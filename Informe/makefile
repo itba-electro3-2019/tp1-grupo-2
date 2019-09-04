@@ -2,7 +2,7 @@
 # Makefile for LaTeX
 ##################################################################
 
-REPORT_FILE = main
+REPORT_FILE = informe
 SOURCE = caratula ej1 ej2 ej3 ej4 ej5
 OTHER = *~ *.aux *.dvi *.toc *.bbl *.blg *.gz *.out *.thm *.ps *.idx *.ilg *.ind *.log *.fdb_latexmk *.fls
 
