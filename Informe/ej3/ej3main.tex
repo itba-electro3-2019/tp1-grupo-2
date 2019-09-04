@@ -1,4 +1,35 @@
 \section{Ejercicio 3}
 \noindent
-El ejercicio consta en crear mediante el uso del lenguaje Verilog un encoder de 4 entradas y 2 salidas y un demux de 4 salidas.\par
-Se tiene como consideración que ante cualquier entrada no esperada la salida será alta impedancia, es decir, Z.
+El ejercicio consta en crear mediante el uso del lenguaje Verilog un encoder de cuatro entradas y dos salidas y un demux de cuatro salidas con dos \textit{select lines}.\par
+Se tiene como consideración que ante cualquier entrada no esperada la salida será alta impedancia, es decir, Z.\newline
+A continuaci\'on se muestran las tablas de verdad:
+
+\begin{table}[H]
+    \center
+    \begin{tabular}{|lll|llll|}
+    \hline
+    \textbf{S1} & \textbf{S2} & \textbf{In} & \textbf{Out0} & \textbf{Out1} & \textbf{Out2} & \textbf{Out3} \\ \hline
+    0           & 0           & 0           & 0             & 0             & 0             & 0             \\
+    0           & 0           & 1           & 0             & 0             & 0             & 1             \\
+    0           & 1           & 0           & 0             & 0             & 0             & 0             \\
+    0           & 1           & 1           & 0             & 0             & 1             & 0             \\
+    1           & 0           & 0           & 0             & 0             & 0             & 0             \\
+    1           & 0           & 1           & 0             & 1             & 0             & 0             \\
+    1           & 1           & 0           & 0             & 0             & 0             & 0             \\
+    1           & 1           & 1           & 1             & 0             & 0             & 0             \\ \hline
+    \end{tabular}
+    \caption{Tabla de verdad de el demux de 4 salidas}
+    \end{table}
+
+    \begin{table}[H]
+        \center
+        \begin{tabular}{|cccc|cc|}
+        \hline
+        \multicolumn{1}{|l}{\textbf{In1}} & \multicolumn{1}{l}{\textbf{In2}} & \multicolumn{1}{l}{\textbf{In3}} & \multicolumn{1}{l|}{\textbf{In4}} & \multicolumn{1}{l}{\textbf{Out0}} & \multicolumn{1}{l|}{\textbf{Out1}} \\ \hline
+        1                                 & 0                                & 0                                & 0                                 & 0                                 & 0                                  \\
+        0                                 & 1                                & 0                                & 0                                 & 0                                 & 1                                  \\
+        0                                 & 0                                & 1                                & 0                                 & 1                                 & 0                                  \\
+        0                                 & 0                                & 0                                & 1                                 & 1                                 & 1                                  \\ \hline
+        \end{tabular}
+        \caption{Tabla de verdad de el encoder de 4 entradas}
+        \end{table}
