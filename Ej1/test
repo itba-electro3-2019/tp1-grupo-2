@@ -9,6 +9,11 @@ assert "./run 0 1 1" "Res: 0.5 | Ran: 1.5"
 assert "./run 1 1 1" "Res: 0.5 | Ran: 1.5"
 assert "./run 0 1 2" "Res: 0.25 | Ran: 1.75"
 assert "./run 0 a 1" "ERROR"
+assert "./run 0 0 0" "ERROR"
+assert "./run 7 8 0 0 0" "ERROR"
+assert "./run 1 24 127" "Res: 5.87747e-39 | Ran: 1.67772e+07"
+assert "./run 0 27 140" "ERROR"
+
 
 # end of test suite
 assert_end

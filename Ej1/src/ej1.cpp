@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     }
     int entero = atoi(argv[2]);
     int decimal = atoi(argv[3]);
-    if(entero > 24 || decimal > 127)
+    if(entero > 24 || decimal > 127 || (entero==0 && decimal==0))
     {   //Limitaciones de c++
         std::cout << "ERROR\n";
 	    return 0;
