@@ -1,0 +1,26 @@
+\newpage
+\section{Ejercicio 1}
+\subsection{An\'alisis}
+\noindent
+Este ejercicio consiste en implementar un programa el cual dada cierta convenci\'on de punto fijo devuelva el rango y la resoluci\'on del mismo.\\
+La convenci\'on se recibe al momento de ejecutar el programa en el siguiente orden: Signado, Bits parte entera y Bits parte fraccionaria, a lo largo del presente informe se har\'a referencia a los mismos como: 's', 'a' y 'b' respectivamente.\\
+Inicialmente para el c\'alculo de la resoluci\'on se puede observar que la misma viene dada por el bit menos significativo, por lo tanto responde a la expresi\'on \ref{eqn:resolucion}, no importando si se est\'a trabajando con un n\'umero signado o no signado.
+\begin{equation}
+    Res = 2^{-b}
+    \label{eqn:resolucion}
+\end{equation}
+Luego para hallar el rango se calcula la diferencia entre el mayor n\'umero que es posible representar y el menor, de esta forma se obtienen las expresiones \ref{eqn:ran_no_sig} y \ref{eqn:ran_sig}, para n\'umeros signados y no signados, respectivamente. Con esto se puede evidenciar que el rango tampoco depende de la convenci\'on de signo que se proponga utilizar, por lo tanto 's' solo debe ser validado para el correcto funcionamiento del programa.
+\begin{equation}
+    Ran = (Max-Min) = \sum_{i=-b}^{a-1}2^{i} - 0 = \sum_{i=-b}^{a-1}2^{i} 
+    \label{eqn:ran_no_sig}
+\end{equation}
+\begin{equation}
+    Ran = (Max-Min) = \sum_{i=-b}^{a-2}2^{i} - (-2^{a-1}) = \sum_{i=-b}^{a-1}2^{i} 
+    \label{eqn:ran_sig}
+\end{equation}
+\subsection{Elecci\'n del lenguaje}
+\noindent
+Inicialmente, al ser un trabajo sencillo, se opt\'o por utilizar el lenguaje 'C', de esta forma se procedi\'o a realizar el algoritmo necesario para la validaci\'on, el mismo comprueba que 's' sea '1' o '0', e inicialmente se comprob\'o solamente que 'a' y 'b' fuesen n\'umeros enteros, y que ambos sean distintos de '0' simultáneamente. Luego de la validaci\'on de datos, se desarroll\'o el algoritmo del calculo del rango y la resoluci\'on, pero al momento de tener que imprimir la respuesta en pantalla no se pudo obtener el formato deseado debido a la forma de representar n\'umeros con decimales, debido a que el lenguaje no ajusta din\'amicamente la forma de representar este tipo de números, sino que en lugar de eso muestra una cantidad especificada de cifras significativas del valor.\\
+Por lo tanto para poder solucionar esta limitaci\'on de decidi\'o cambiar al lenguaje 'C++', con el cual la forma de representar en pantalla los n\'umeros era la requerida para responder con lo solicitado.\\
+Otra limitaci\'on que se encontró durante la resolución de este apartado fue el l\'imite num\'erico que era posible procesar, ya que, al utilizar el tipo de dato \textit{float}, la resoluci\'on propia del mismo es de $2^{-126}$, por lo tanto 'b'=126 es el l\'imite superior que el programa puede recibir como valor para la parte fraccionaria.\\
+Y como limitación para la parte entera se tiene 'a'=24, ya que para valores mayores del mismo, la precisión del n\'umero representado deja de ser exacta y comienza a tomar aproximaciones a n\'umeros múltiplos de potencias de 2.\\ 
