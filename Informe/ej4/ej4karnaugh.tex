@@ -1,7 +1,6 @@
-
 \subsection{Desarrollo de los mapas de Karnaugh de las salidas}
 \noindent
-Para los siguientes mapas se utiliz\'o la misma convenci\'on que para la tabla de verdad. De esta forma el orden es A-B-C-D siendo A el bit m\'as significativo y D el bit menos significativo.
+Para los siguientes mapas se utiliz\'o la misma convenci\'on que para la tabla de verdad. De esta forma el orden es A-B-C-D, siendo A el bit m\'as significativo y D el bit menos significativo.
 
 %Empty Karnaugh map 4x4
 \newenvironment{Karnaugh4}%
@@ -60,7 +59,7 @@ Mapa de Karnaugh para $Y_1$
 \end{center}
 
 \noindent
-En este caso, al realizar un an\'alisis del mapa se pudieron apreciar dos grupos (marcados en magenta y amarillo). Dentro del primer conjunto (magenta) sucede un cambio en los valores de C y D, manteniendose A en 0 y B en 1. Con respecto al segundo grupo (amarillo) C y D nuevamente toman distintos valores, mientras que A se mantiene en 1 y B en 0. Como conclusi\'on, la expresi\'on m\'as simplificada para $Y_1$ es: 
+En este caso, al realizar un an\'alisis del mapa se pudieron apreciar dos grupos (marcados en magenta y amarillo). Dentro del primer conjunto (magenta) sucede un cambio en los valores de C y D, manteni\'endose A en 0 y B en 1. Con respecto al segundo grupo (amarillo) C y D nuevamente toman distintos valores, mientras que A se mantiene en 1 y B en 0. Como conclusi\'on, la expresi\'on m\'as simplificada para $Y_1$ es: 
 \begin{equation}
     Y_1 = \overline{A}.B
  + A.\overline{B}
@@ -108,4 +107,4 @@ Por \'ultimo, tienendo en cuenta que: dentro del grupo marr\'on C vale 0 y D, 1;
  \end{equation}
 
 \noindent
-Por otra parte, analizando todas las expresiones se puede apreciar que, excluyendo la entrada A y la salida $Y_0$, el resto de las salidas son el resultado de ingresar 2 entradas a una compuerta XOR. Este hecho se puede pensar como dicha operaci\'on (XOR) es la que se realiza entre cada bit binario de la entrada y su bit inmediantamente anterior (m\'as significativo) para formar cada bit del n\'umero expresado por c\'odigo de Gray - exceptuando el primer bit ya que toman el mismo valor independientemente del resto-.
+Por otra parte, analizando todas las expresiones se puede apreciar que, excluyendo la entrada A y la salida $Y_0$, el resto de las salidas son el resultado de ingresar 2 entradas a una compuerta XOR. Este hecho se puede pensar como dicha operaci\'on (XOR) es la que se realiza entre cada bit binario de la entrada y su bit inmediatamente anterior (m\'as significativo) para formar cada bit del n\'umero expresado por c\'odigo de Gray - exceptuando el primer bit ya que toman el mismo valor independientemente del resto-.

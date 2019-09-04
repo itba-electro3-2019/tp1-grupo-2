@@ -6,9 +6,9 @@ El m\'odulo tiene 3 partes principales: la validaci\'on de la entrada, la multip
 
 \subsection{Consideraciones generales}
 \noindent
-Se detallan las consideraciones que se tuvieron a la hora de programar para lograr una mayor calidad del c\'odigo. 
-Hay un m\'odulo principal llamado 'BCDMultiplier', que recibe los n\'umeros BCD a multiplicar en dos arreglos de 4 bits, devuelve el resultado de la multiplicaci\'on en formato BCD en un arreglo de 8 bits, y adem\'as devuelve 2 bits m\'as de validaci\'on que son explicados mas adelante.
-Todos los arreglos de bits fueron definidos siguiendo la conveci\'on Big Endian ([0:n]), en vez de Little Endian ([n:0]), para tener el bit m\'as significativo en la primera posici\'on, ya que se consider\'o m\'as intuitivo. \newline
+Se detallan las consideraciones que se tuvieron en cuenta a la hora de programar para lograr una mayor calidad del c\'odigo. 
+Hay un m\'odulo principal llamado 'BCDMultiplier', que recibe los n\'umeros BCD a multiplicar en dos arreglos de 4 bits, devuelve el resultado de la multiplicaci\'on en formato BCD en un arreglo de 8 bits, y adem\'as devuelve 2 bits m\'as de validaci\'on que son explicados m\'as adelante.
+Todos los arreglos de bits fueron definidos siguiendo la conveci\'on Big Endian ([0:n]), en vez de Little Endian ([n:0]), para tener el bit m\'as significativo en la primera posici\'on, ya que se consider\'o m\'as intuitivo de esa forma. \newline
 
 
 
@@ -37,4 +37,4 @@ Una vez validada la entrada, se debe realizar la multiplicaci\'on en binario. Pa
 \subsection{Banco de pruebas}
 \noindent
 El banco de pruebas prueba 6 casos que se consideran representativos de la totalidad de entradas que puede tener el m\'odulo. En primer lugar, se prueba si una multiplicaci\'on por 0 arroja 0 como resultado. Los siguientes dos casos son multiplicaciones v\'alidas con resultado distinto de 0. Por \'ultimo, hay 3 casos inv\'alidos, en los que se puede observar que el m\'odulo distingue cu\'al de sus entradas es inv\'alida. \\
-Para que el c\'odigo del banco de pruebas no fuera repetitivo, se utilizaron tasks de Verilog para las salidas para el usuario.
+Para que el c\'odigo del banco de pruebas no fuera repetitivo, se utilizaron tasks de Verilog para las salidas hacia el usuario.
