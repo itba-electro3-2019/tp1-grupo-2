@@ -1,23 +1,23 @@
 \newpage
 \section{Ejercicio 3}
 \noindent
-El ejercicio consta en crear mediante el uso del lenguaje Verilog un encoder de cuatro entradas y dos salidas y un demux de cuatro salidas con dos \textit{select lines}.\par
+El ejercicio consta en crear mediante el uso del lenguaje Verilog un encoder de cuatro entradas y dos salidas y un demux de cuatro salidas con dos \textit{select lines}.\newline
 Se tiene como consideración que ante cualquier entrada no esperada la salida será alta impedancia, es decir, Z.\newline
 A continuaci\'on se muestran las tablas de verdad:
 
 \begin{table}[H]
     \center
-    \begin{tabular}{|lll|llll|}
+    \begin{tabular}{|ccc|cccc|}
     \hline
     \textbf{S1} & \textbf{S2} & \textbf{In} & \textbf{Out0} & \textbf{Out1} & \textbf{Out2} & \textbf{Out3} \\ \hline
-    0           & 0           & 0           & 0             & 0             & 0             & 0             \\
-    0           & 0           & 1           & 0             & 0             & 0             & 1             \\
-    0           & 1           & 0           & 0             & 0             & 0             & 0             \\
-    0           & 1           & 1           & 0             & 0             & 1             & 0             \\
-    1           & 0           & 0           & 0             & 0             & 0             & 0             \\
-    1           & 0           & 1           & 0             & 1             & 0             & 0             \\
-    1           & 1           & 0           & 0             & 0             & 0             & 0             \\
-    1           & 1           & 1           & 1             & 0             & 0             & 0             \\ \hline
+    \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             \\
+    \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}1             \\
+    \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             \\
+    \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}1             & \cellcolor[HTML]{FD6864}0             \\
+    \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             \\
+    \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}1             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             \\
+    \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{34FF34}0           & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             \\
+    \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{34FF34}1           & \cellcolor[HTML]{FD6864}1             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             & \cellcolor[HTML]{FD6864}0             \\ \hline
     \end{tabular}
     \caption{Tabla de verdad de el demux de 4 salidas}
     \end{table}
@@ -27,10 +27,10 @@ A continuaci\'on se muestran las tablas de verdad:
         \begin{tabular}{|cccc|cc|}
         \hline
         \multicolumn{1}{|l}{\textbf{In1}} & \multicolumn{1}{l}{\textbf{In2}} & \multicolumn{1}{l}{\textbf{In3}} & \multicolumn{1}{l|}{\textbf{In4}} & \multicolumn{1}{l}{\textbf{Out0}} & \multicolumn{1}{l|}{\textbf{Out1}} \\ \hline
-        1                                 & 0                                & 0                                & 0                                 & 0                                 & 0                                  \\
-        0                                 & 1                                & 0                                & 0                                 & 0                                 & 1                                  \\
-        0                                 & 0                                & 1                                & 0                                 & 1                                 & 0                                  \\
-        0                                 & 0                                & 0                                & 1                                 & 1                                 & 1                                  \\ \hline
+        \cellcolor[HTML]{34FF34}1                                 & \cellcolor[HTML]{34FF34}0                                & \cellcolor[HTML]{34FF34}0                                & \cellcolor[HTML]{34FF34}0                                 & \cellcolor[HTML]{FD6864}0                                 & \cellcolor[HTML]{FD6864}0                                  \\
+        \cellcolor[HTML]{34FF34}0                                 & \cellcolor[HTML]{34FF34}1                                & \cellcolor[HTML]{34FF34}0                                & \cellcolor[HTML]{34FF34}0                                 & \cellcolor[HTML]{FD6864}0                                 & \cellcolor[HTML]{FD6864}1                                  \\
+        \cellcolor[HTML]{34FF34}0                                 & \cellcolor[HTML]{34FF34}0                                & \cellcolor[HTML]{34FF34}1                                & \cellcolor[HTML]{34FF34}0                                 & \cellcolor[HTML]{FD6864}1                                 & \cellcolor[HTML]{FD6864}0                                  \\
+        \cellcolor[HTML]{34FF34}0                                 & \cellcolor[HTML]{34FF34}0                                & \cellcolor[HTML]{34FF34}0                                & \cellcolor[HTML]{34FF34}1                                 & \cellcolor[HTML]{FD6864}1                                 & \cellcolor[HTML]{FD6864}1                                  \\ \hline
         \end{tabular}
         \caption{Tabla de verdad de el encoder de 4 entradas}
         \end{table}
