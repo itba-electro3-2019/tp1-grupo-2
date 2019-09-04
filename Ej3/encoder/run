@@ -1,0 +1,4 @@
+#!/bin/bash
+
+vvp bin/ej3enc
+rm bin/ej3enc

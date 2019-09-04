@@ -1,0 +1,4 @@
+#!/bin/bash
+
+vvp bin/ej5
+rm bin/ej5

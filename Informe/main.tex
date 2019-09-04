@@ -31,18 +31,23 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[12pt, a4paper]{article}
+\documentclass[11pt, a4paper]{article}
 
-
-
-
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish, es-tabla, es-nodecimaldot]{babel}
+\addto\captionsspanish{\renewcommand{\contentsname}{Contenido}}
 
 \usepackage{graphicx}
-\usepackage[spanish]{babel}
-\usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage[table,xcdraw]{xcolor}
 
+\usepackage[a4paper, 					% Page Layout
+                     %showframe,				% This shows the frame
+                     twoside, includehead,
+                     footskip=7mm, headsep=6mm, headheight=4.8mm,
+                     marginparsep=2mm, marginparwidth=22mm,
+                     top=25mm, bottom=25mm, inner=30mm, outer=25mm]{geometry}
+                     
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{siunitx}
 \usepackage{lipsum}
@@ -50,6 +55,7 @@
 \usepackage{caption}
 \usepackage{physics}
 \usepackage{tikz}
+\usetikzlibrary{babel}	
 \usetikzlibrary{matrix,calc}
 \captionsetup[table]{position=bottom}   %% or below
 \makeatletter
@@ -59,6 +65,7 @@
   \smash{\raisebox{-.6\height}{$#1-$}}\cr}}
 \makeatother
 \usepackage{lscape}
+\usepackage{float}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 
 \begin{document}
@@ -67,15 +74,15 @@
 
 \tableofcontents
 \newpage
-\input{introduccion.tex}
-\section{Ejercicio 1}
-
-
+\input{ej1/ej1main.tex}
+\newpage
 \input{ej2/ej2main.tex}
-
+\newpage
 \input{ej3/ej3main.tex}
-
+\newpage
 \input{ej4/ej4main.tex}
-
+\newpage
+\input{ej5/ej5main.tex}
+\newpage
 \input{conclusion.tex}
 \end{document}
