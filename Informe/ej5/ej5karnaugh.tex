@@ -4,7 +4,7 @@
 {
 \begin{tikzpicture}[baseline=(current bounding box.north),scale=0.8]
 \draw (0,0) grid (4,4);
-\draw (0,4) -- node [pos=0.7,above right,anchor=south west] {$X_3X_4$} node [pos=0.7,below left,anchor=north east] {$X_1X_2$} ++(120:1);
+\draw (0,4) -- node [pos=0.7,above right,anchor=south west] {$x_3x_4$} node [pos=0.7,below left,anchor=north east] {$x_1x_2$} ++(120:1);
 %
 \matrix (mapa) [matrix of nodes,
         column sep={0.8cm,between origins},
@@ -31,7 +31,7 @@
     \maxterms{0,1,2,3,4,5,6,7,8,9}
     \minterms{10,11,12,13,14,15}
     \implicant{15}{10}{red}
-    \implicant{12}{14}{red}
+    \implicant{12}{14}{blue}
 \end{Karnaugh3}
 \end{center}
 

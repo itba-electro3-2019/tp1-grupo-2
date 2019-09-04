@@ -4,7 +4,7 @@
 Para los siguientes mapas se utiliz\'o la misma convenci\'on que para la tabla de verdad. De esta forma el orden es A-B-C-D siendo A el bit m\'as significativo y D el bit menos significativo.
 
 %Empty Karnaugh map 4x4
-\newenvironment{Karnaugh2}%
+\newenvironment{Karnaugh4}%
 {
 \begin{tikzpicture}[baseline=(current bounding box.north),scale=0.8]
 \draw (0,0) grid (4,4);
@@ -32,12 +32,12 @@ Para los siguientes mapas se utiliz\'o la misma convenci\'on que para la tabla d
 \begin{center}
 Mapa de Karnaugh para $Y_0$
 
-\begin{Karnaugh2}
+\begin{Karnaugh4}
     \centering
     \minterms{3,2,7,6,10,11,14,15}
     \maxterms{0,1,12,13,4,5,9,8}
     \implicant{3}{10}{red}
-\end{Karnaugh2}
+\end{Karnaugh4}
 \end{center}
 
 \noindent
@@ -50,13 +50,13 @@ Mediante la observaci\'on del mapa y teniendo en cuenta que para el conjunto mar
 \begin{center}
 Mapa de Karnaugh para $Y_1$
 
-\begin{Karnaugh2}
+\begin{Karnaugh4}
     \centering
     \minterms{1,2,5,6,13,14,9,10}
     \maxterms{0,11,3,4,7,8,12,15}
     \implicant{1}{9}{magenta}
     \implicant{2}{10}{yellow}
-\end{Karnaugh2}
+\end{Karnaugh4}
 \end{center}
 
 \noindent
@@ -70,14 +70,14 @@ En este caso, al realizar un an\'alisis del mapa se pudieron apreciar dos grupos
 \begin{center}
 Mapa de Karnaugh para $Y_2$
 
-\begin{Karnaugh2}
+\begin{Karnaugh4}
     \centering
     \minterms{1,3,5,7,12,14,8,10}
     \maxterms{0,2,4,6,9,11,13,15}
     \implicant{1}{7}{blue}
     \implicant{14}{10}{gray}
     \implicant{12}{8}{gray}
-\end{Karnaugh2}
+\end{Karnaugh4}
 \end{center}
 
 \noindent
@@ -90,13 +90,13 @@ Con el fin de obtener la expresi\'on m\'as simplificada para $Y_2$ se distinguie
 \begin{center}
 Mapa de Karnaugh para $Y_3$
 
-\begin{Karnaugh2}
+\begin{Karnaugh4}
     \centering
     \minterms{4,5,7,6,8,9,11,10}
     \maxterms{0,2,1,3,12,14,13,15}
     \implicant{4}{6}{brown}
     \implicant{8}{10}{green}
-\end{Karnaugh2}
+\end{Karnaugh4}
 \end{center}
 
 \noindent

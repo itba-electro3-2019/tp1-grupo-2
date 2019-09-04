@@ -1,11 +1,10 @@
-\subsection{Ejercicio 5}
+\section{Ejercicio 5}
 
-\subsubsection{Introducci\'on}
 \noindent
-El \'ultimo ejercicio requiere la implementaci\ón en Verilog de un m\'odulo multiplicador de dos n\'umeros de un d\'igito en formato BCD, expresando a la salida el resultado como un n\'umero de dos d\'igitos en el mismo formato. \newline
-El m\'odulo tiene 3 partes principales: la validaci\'on de la entrada, la multiplicaci\'on en s\'i, y la conversi\'on de binario a BCD del resultado de la multiplicaci\'on. A continuaci\'on se explican las etapas de la implementaci\'on.
+El \'ultimo ejercicio requiere la implementaci\'on en Verilog de un m\'odulo multiplicador de dos n\'umeros de un d\'igito en formato BCD, expresando a la salida el resultado como un n\'umero de dos d\'igitos en el mismo formato. \newline
+El m\'odulo tiene 3 partes principales: la validaci\'on de la entrada, la multiplicaci\'on en s\'i, y la conversi\'on de binario a BCD del resultado de la multiplicaci\'on. A continuaci\'on se explican consideraciones generales del c\'odigo y las etapas de la implementaci\'on.
 
-\subsubsection{Consideraciones generales}
+\subsection{Consideraciones generales}
 \noindent
 Se detallan las consideraciones que se tuvieron a la hora de programar para lograr una mayor calidad del c\'odigo. 
 Hay un m\'odulo principal llamado 'BCDMultiplier', que recibe los n\'umeros BCD a multiplicar en dos arreglos de 4 bits, devuelve el resultado de la multiplicaci\'on en formato BCD en un arreglo de 8 bits, y adem\'as devuelve 2 bits m\'as de validaci\'on que son explicados mas adelante.
@@ -13,13 +12,12 @@ Todos los arreglos de bits fueron definidos siguiendo la conveci\'on Big Endian 
 
 
 
-\subsubsection{Validaci\'on de la entrada}
+\subsection{Validaci\'on de la entrada}
 \noindent
-
-Antes de proceder a realizar la multiplicaci\'on, es necesario validar que cada nybble recibido corresponda a un n\'umero BCD v\'alido, es decir, que corresponda  a un n\'umero menor a 10. Para poder determinar la validez de un n\'umero recibido, en la Tabla \ref{ej5table} se muestra la tabla de verdad de la validaci\'on, considerando al n\'umero como $X = x_1x_2x_3x_4$ donde se puede observar que la salida toma el valor 1, que se toma como error, s\'olo si el valor de la entrada supera el valor de 9.
+Antes de proceder a realizar la multiplicaci\'on, es necesario validar que cada nybble recibido corresponda a un n\'umero BCD v\'alido, es decir, que corresponda  a un n\'umero menor a 10. Para poder determinar la validez de un n\'umero recibido, en la Tabla \ref{ej5table} se muestra la tabla de verdad de la validaci\'on, considerando al n\'umero como $X = x_1x_2x_3x_4$ donde se puede observar que la salida toma el valor 1, que se toma como error, si y s\'olo si el valor de la entrada supera el valor de 9, que es el l\'imite para la representaci\'on en un d\'igito BCD.
 
 \input{ej5/ej5truthtable.tex}
-
+\noindent
 De la tabla se obtiene el siguiente mapa de Karnaugh:
 
 \input{ej5/ej5karnaugh.tex}
@@ -31,7 +29,7 @@ Resolviendo para los mint\'erminos, se llega a la siguiente suma de productos:
     \label{ej5_validation_eq}
 \end{equation}
 \noindent
-Por lo tanto, para validar los n\'umeros de entrada, basta implementar la Ecuaci\'on \ref{ej5_validation_eq}. \newline
+Por lo tanto, para validar los n\'umeros de entrada, basta implementar la Ecuaci\'on \ref{ej5_validation_eq}. \\
 A la hora de la implementaci\'on en Verilog, se decidi\'o realizar un m\'odulo espec\'ifico que realice la validaci\'on, mediante la expresi\'on l\'ogica obtenida anteriormente. Esta validaci\'on se realiza para ambos n\'umeros de entrada, y el m\'odulo principal tiene dos bits de output para indicar la validez de cada par\'ametro de entrada.
 \subsection{Multiplicaci\'on binaria y conversi\'on a BCD}
 \noindent
