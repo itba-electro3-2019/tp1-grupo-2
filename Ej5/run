@@ -1,4 +1,4 @@
 #!/bin/bash
 
-vvp bin/ej5.out
-rm bin/ej5.out
+vvp bin/ej5
+rm bin/ej5

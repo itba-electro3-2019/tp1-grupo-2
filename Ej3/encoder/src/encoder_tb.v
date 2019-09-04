@@ -1,5 +1,3 @@
-`include "encoder.v"
-
 module encoder_tb();
 reg [3:0] in;
 wire [1:0] out;

@@ -1,5 +1,3 @@
-`include "demux.v"
-
 module demux_tb();
 reg in;
 reg [1:0] sel;
