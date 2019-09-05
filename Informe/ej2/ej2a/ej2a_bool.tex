@@ -1,72 +1,72 @@
 \subsubsection{Resoluci\'on mediante algebra booleana}
-\vspace{5mm}
+\vspace{3mm}
 \noindent
 La expresi\'on obtenida por los minterminos dados es la siguiente:\\
 
 $f(a,b,c,d,e) =  \overline{a}.\overline{b}.\overline{c}.\overline{d}.\overline{e} + \overline{a}.\overline{b}.\overline{c}.d.\overline{e} +
-\vspace{5mm}\overline{a}.\overline{b}.c.\overline{d}.\overline{e} + \overline{a}.\overline{b}.c.d.e + \overline{a}.b.\overline{c}.\overline{d}.\overline{e} + \overline{a}.b.\overline{c}.d.\overline{e} + \vspace{5mm}\overline{a}.b.c.\overline{d}.\overline{e} + a.\overline{b}.\overline{c}.\overline{d}.\overline{e} + a.\overline{b}.\overline{c}.d.\overline{e} + a.\overline{b}.c.\overline{d}.\overline{e} + a.\overline{b}.c.d.e + a.b.\overline{c}.\overline{d}.\overline{e} + a.b.\overline{c}.\overline{d}.e + a.b.\overline{c}.d.\overline{e} + a.b.\overline{c}.d.e + a.b.c.\overline{d}.\overline{e} $
-\vspace{5mm}
+\vspace{3mm}\overline{a}.\overline{b}.c.\overline{d}.\overline{e} + \overline{a}.\overline{b}.c.d.e + \overline{a}.b.\overline{c}.\overline{d}.\overline{e} + \overline{a}.b.\overline{c}.d.\overline{e} + \vspace{3mm}\overline{a}.b.c.\overline{d}.\overline{e} + a.\overline{b}.\overline{c}.\overline{d}.\overline{e} + a.\overline{b}.\overline{c}.d.\overline{e} + a.\overline{b}.c.\overline{d}.\overline{e} + a.\overline{b}.c.d.e + a.b.\overline{c}.\overline{d}.\overline{e} + a.b.\overline{c}.\overline{d}.e + a.b.\overline{c}.d.\overline{e} + a.b.\overline{c}.d.e + a.b.c.\overline{d}.\overline{e} $
+\vspace{3mm}
 
 \noindent
 Se puede ampliar la expresi\'on, con la finalidad de luego reducirla significativamente a partir de las simplificaci\'ones del \'algebra booleana :\\
 
 $f(a,b,c,d,e) =  \overline{a}.\overline{b}.\overline{c}.\overline{d}.\overline{e} + \overline{a}.\overline{b}.\overline{c}.d.\overline{e} +
-\vspace{5mm}\overline{a}.\overline{b}.c.\overline{d}.\overline{e} + \overline{a}.\overline{b}.c.d.e + \overline{a}.b.\overline{c}.\overline{d}.\overline{e} + \overline{a}.b.\overline{c}.d.\overline{e} + \vspace{5mm}\overline{a}.b.c.\overline{d}.\overline{e} + a.\overline{b}.\overline{c}.\overline{d}.\overline{e} + a.\overline{b}.\overline{c}.d.\overline{e} + a.\overline{b}.c.\overline{d}.\overline{e} + a.\overline{b}.c.d.e + a.b.\overline{c}.\overline{d}.\overline{e} + a.b.\overline{c}.\overline{d}.e + a.b.\overline{c}.d.\overline{e} + \vspace{5mm}a.b.\overline{c}.d.e + a.b.c.\overline{d}.\overline{e} + \textcolor{red}{a.\overline{b}.\overline{c}.\overline{d}.\overline{e}} \color{black}+
+\vspace{3mm}\overline{a}.\overline{b}.c.\overline{d}.\overline{e} + \overline{a}.\overline{b}.c.d.e + \overline{a}.b.\overline{c}.\overline{d}.\overline{e} + \overline{a}.b.\overline{c}.d.\overline{e} + \vspace{3mm}\overline{a}.b.c.\overline{d}.\overline{e} + a.\overline{b}.\overline{c}.\overline{d}.\overline{e} + a.\overline{b}.\overline{c}.d.\overline{e} + a.\overline{b}.c.\overline{d}.\overline{e} + a.\overline{b}.c.d.e + a.b.\overline{c}.\overline{d}.\overline{e} + a.b.\overline{c}.\overline{d}.e + a.b.\overline{c}.d.\overline{e} + \vspace{3mm}a.b.\overline{c}.d.e + a.b.c.\overline{d}.\overline{e} + \textcolor{red}{a.\overline{b}.\overline{c}.\overline{d}.\overline{e}} \color{black}+
 \textcolor{red}{a.b.\overline{c}.\overline{d}.\overline{e}} \color{black}+\textcolor{red}{ \overline{a}.\overline{b}.\overline{c}.\overline{d}.\overline{e}}\textcolor{black}{+} \textcolor{red}{a.b.\overline{c}.d.\overline{e}} \color{black}+ \textcolor{red}{\overline{a}.b.\overline{c}.\overline{d}.\overline{e}} \color{black}{+} \textcolor{red}{a.b.\overline{c}.\overline{d}.\overline{e}}$
-\vspace{5mm}\par
+\vspace{3mm}\par
 
 \noindent
 De aqu\'i utilizando la propiedad de absorci\'on \par
-\vspace{5mm}
+\vspace{3mm}
 
 $f(a,b,c,d,e) =  \color{red}{\overline{a}.\overline{b}.\overline{c}.\overline{d}.\overline{e}} \color{black}+ \overline{a}.\overline{b}.\overline{c}.d.\overline{e} \color{black}+
-\vspace{5mm}\color{green}{\overline{a}.\overline{b}.c.\overline{d}.\overline{e}} \color{black}+ \color{blue}{\overline{a}.\overline{b}.c.d.e} \color{black}\color{black}+ \color{yellow}{\overline{a}.b.\overline{c}.\overline{d}.\overline{e}} \color{black}+ \color{pink}{\overline{a}.b.\overline{c}.d.\overline{e}} \color{black}+ \vspace{5mm}\color{violet}{\overline{a}.b.c.\overline{d}.\overline{e}} \color{black}+ \color{brown}{a.\overline{b}.\overline{c}.\overline{d}.\overline{e}} \color{black}+ a.\overline{b}.\overline{c}.d.\overline{e} \color{black}+ \color{orange}{a.\overline{b}.c.\overline{d}.\overline{e}} \color{black}+ \color{blue}{a.\overline{b}.c.d.e} \color{black}+ \color{yellow}{a.b.\overline{c}.\overline{d}.\overline{e}} \color{black}+ \color{gray}{a.b.\overline{c}.\overline{d}.e} \color{black}+ \color{cyan}{a.b.\overline{c}.d.\overline{e}} \color{black}+ \color{gray}{a.b.\overline{c}.d.e} \color{black}+ \vspace{5mm}\color{orange}{a.b.c.\overline{d}.\overline{e}} \color{black}+ \color{magenta}{a.\overline{b}.\overline{c}.\overline{d}.\overline{e}} \color{black}+
+\vspace{3mm}\color{green}{\overline{a}.\overline{b}.c.\overline{d}.\overline{e}} \color{black}+ \color{blue}{\overline{a}.\overline{b}.c.d.e} \color{black}\color{black}+ \color{yellow}{\overline{a}.b.\overline{c}.\overline{d}.\overline{e}} \color{black}+ \color{pink}{\overline{a}.b.\overline{c}.d.\overline{e}} \color{black}+ \vspace{3mm}\color{violet}{\overline{a}.b.c.\overline{d}.\overline{e}} \color{black}+ \color{brown}{a.\overline{b}.\overline{c}.\overline{d}.\overline{e}} \color{black}+ a.\overline{b}.\overline{c}.d.\overline{e} \color{black}+ \color{orange}{a.\overline{b}.c.\overline{d}.\overline{e}} \color{black}+ \color{blue}{a.\overline{b}.c.d.e} \color{black}+ \color{yellow}{a.b.\overline{c}.\overline{d}.\overline{e}} \color{black}+ \color{gray}{a.b.\overline{c}.\overline{d}.e} \color{black}+ \color{cyan}{a.b.\overline{c}.d.\overline{e}} \color{black}+ \color{gray}{a.b.\overline{c}.d.e} \color{black}+ \vspace{3mm}\color{orange}{a.b.c.\overline{d}.\overline{e}} \color{black}+ \color{magenta}{a.\overline{b}.\overline{c}.\overline{d}.\overline{e}} \color{black}+
 a.b.\overline{c}.\overline{d}.\overline{e} \color{black}+ \color{green}{\overline{a}.\overline{b}.\overline{c}.\overline{d}.\overline{e}} \color{black}+ \color{pink}{a.b.\overline{c}.d.\overline{e}} \color{black}+ \color{violet}{\overline{a}.b.\overline{c}.\overline{d}.\overline{e}} \color{black}+ \color{cyan}{a.b.\overline{c}.\overline{d}.\overline{e}}$
-\vspace{8mm}\par
+\vspace{5mm}\par
 $
 \color{black}{f(a,b,c,d,e) =}  \color{red}{\overline{a}.\overline{b}.\overline{c}.\overline{e}} \color{black}+
-\vspace{5mm}\color{green}{\overline{a}.\overline{b}.\overline{d}.\overline{e}} \color{black}+ \color{blue}{\overline{b}.c.d.e} \color{black}+ \color{yellow}{b.\overline{c}.\overline{d}.\overline{e}} \color{black}+ \color{pink}{b.\overline{c}.d.\overline{e}} \color{black}+ \color{violet}{\overline{a}.b.\overline{d}.\overline{e}} \color{black}+ \color{brown}{a.\overline{b}.\overline{c}.\overline{e}} \color{black}+ \color{orange}{a.c.\overline{d}.\overline{e}} \color{black}+ \color{gray}{a.b.\overline{c}.e} \color{black}+ \color{cyan}{a.b.\overline{c}.\overline{e}} \color{black}+ \color{magenta}{a.\overline{c}.\overline{d}.\overline{e}}$
-\vspace{8mm}\par
+\vspace{3mm}\color{green}{\overline{a}.\overline{b}.\overline{d}.\overline{e}} \color{black}+ \color{blue}{\overline{b}.c.d.e} \color{black}+ \color{yellow}{b.\overline{c}.\overline{d}.\overline{e}} \color{black}+ \color{pink}{b.\overline{c}.d.\overline{e}} \color{black}+ \color{violet}{\overline{a}.b.\overline{d}.\overline{e}} \color{black}+ \color{brown}{a.\overline{b}.\overline{c}.\overline{e}} \color{black}+ \color{orange}{a.c.\overline{d}.\overline{e}} \color{black}+ \color{gray}{a.b.\overline{c}.e} \color{black}+ \color{cyan}{a.b.\overline{c}.\overline{e}} \color{black}+ \color{magenta}{a.\overline{c}.\overline{d}.\overline{e}}$
+\vspace{5mm}\par
 
 \noindent
-As\'i llegamos a:\vspace{8mm}\par
+As\'i llegamos a:\vspace{5mm}\par
 
 $
 \color{black}{f(a,b,c,d,e) =}  \overline{a}.\overline{b}.\overline{c}.\overline{e} \color{black}+
-\vspace{5mm}\overline{a}.\overline{b}.\overline{d}.\overline{e} \color{black}+ \overline{b}.c.d.e \color{black}+ b.\overline{c}.\overline{d}.\overline{e} \color{black}+ b.\overline{c}.d.\overline{e} \color{black}+ \overline{a}.b.\overline{d}.\overline{e} \color{black}+ a.\overline{b}.\overline{c}.\overline{e} \color{black}+ a.c.\overline{d}.\overline{e} \color{black}+ a.b.\overline{c}.e \color{black}+ a.b.\overline{c}.\overline{e} \color{black}+ a.\overline{c}.\overline{c}.\overline{e}$
-\vspace{8mm}\par
+\vspace{3mm}\overline{a}.\overline{b}.\overline{d}.\overline{e} \color{black}+ \overline{b}.c.d.e \color{black}+ b.\overline{c}.\overline{d}.\overline{e} \color{black}+ b.\overline{c}.d.\overline{e} \color{black}+ \overline{a}.b.\overline{d}.\overline{e} \color{black}+ a.\overline{b}.\overline{c}.\overline{e} \color{black}+ a.c.\overline{d}.\overline{e} \color{black}+ a.b.\overline{c}.e \color{black}+ a.b.\overline{c}.\overline{e} \color{black}+ a.\overline{c}.\overline{c}.\overline{e}$
+\vspace{5mm}\par
 
 \noindent
-Luego de esto, nuevamente aplicaremos absorcion de la siguiente manera:\vspace{8mm}\par
+Luego de esto, nuevamente aplicaremos absorcion de la siguiente manera:\vspace{5mm}\par
 
 $
 \color{black}{f(a,b,c,d,e) =}  \color{red}{\overline{a}.\overline{b}.\overline{c}.\overline{e}} \color{black}+
-\vspace{5mm}\color{green}{\overline{a}.\overline{b}.\overline{d}.\overline{e}} \color{black}+ \color{black}{\overline{b}.c.d.e} \color{black}+ \color{blue}{b.\overline{c}.\overline{d}.\overline{e} \color{black}+ b.\overline{c}.d.\overline{e}} \color{black}+ \color{green}{\overline{a}.b.\overline{d}.\overline{e}} \color{black}+ \color{red}{a.\overline{b}.\overline{c}.\overline{e}} \color{black}+ \color{magenta}{a.c.\overline{d}.\overline{e}} \color{black}+ \color{cyan}{a.b.\overline{c}.e + a.b.\overline{c}.\overline{e}} \color{black}+ \color{magenta}{a.\overline{c}.\overline{d}.\overline{e}}$
-\vspace{8mm}\par
+\vspace{3mm}\color{green}{\overline{a}.\overline{b}.\overline{d}.\overline{e}} \color{black}+ \color{black}{\overline{b}.c.d.e} \color{black}+ \color{blue}{b.\overline{c}.\overline{d}.\overline{e} \color{black}+ b.\overline{c}.d.\overline{e}} \color{black}+ \color{green}{\overline{a}.b.\overline{d}.\overline{e}} \color{black}+ \color{red}{a.\overline{b}.\overline{c}.\overline{e}} \color{black}+ \color{magenta}{a.c.\overline{d}.\overline{e}} \color{black}+ \color{cyan}{a.b.\overline{c}.e + a.b.\overline{c}.\overline{e}} \color{black}+ \color{magenta}{a.\overline{c}.\overline{d}.\overline{e}}$
+\vspace{5mm}\par
 $
 \color{black}{f(a,b,c,d,e) =}  \color{red}{\overline{b}.\overline{c}.\overline{e}} \color{black}+ \color{green}{\overline{a}.\overline{d}.\overline{e}} \color{black}+ \color{black}{\overline{b}.c.d.e} \color{black}+ \color{blue}{b.\overline{c}.\overline{e}} \color{black}+ \color{magenta}{a.\overline{d}.\overline{e}} \color{black}+ \color{cyan}{a.b.\overline{c}}$
-\vspace{8mm}\par
+\vspace{5mm}\par
 
-Entonces hallamos la siguiente expresi\'on:\vspace{8mm}\par
+Entonces hallamos la siguiente expresi\'on:\vspace{5mm}\par
 
 $
 \color{black}{f(a,b,c,d,e) =}  \overline{b}.\overline{c}.\overline{e} + \overline{a}.\overline{d}.\overline{e} + \overline{b}.c.d.e + b.\overline{c}.\overline{e} + a.\overline{d}.\overline{e} + a.b.\overline{c}$
-\vspace{8mm}\par
+\vspace{5mm}\par
 
-Para luego realizar una ultima absorci\'on:\vspace{8mm}\par
+Para luego realizar una ultima absorci\'on:\vspace{5mm}\par
 
 $
 \color{black}{f(a,b,c,d,e) =}  \color{red}{\overline{b}.\overline{c}.\overline{e}} \color{black}+ \color{blue}{\overline{a}.\overline{d}.\overline{e}} \color{black}+ \color{black}{\overline{b}.c.d.e} \color{black}+ \color{red}{b.\overline{c}.\overline{e}} \color{black}+ \color{blue}{a.\overline{d}.\overline{e}} \color{black}+ \color{black}{a.b.\overline{c}}$
-\vspace{8mm}\par
+\vspace{5mm}\par
 
 
 $
 \color{black}{f(a,b,c,d,e) =}  \color{red}{\overline{c}.\overline{e}} \color{black}+ \color{blue}{\overline{d}.\overline{e}}\color{black} + \color{black}{\overline{b}.c.d.e} +  \color{black}{a.b.\overline{c}}$
-\vspace{8mm}\par
+\vspace{5mm}\par
 
 
 \noindent
-\color{black}De esta manera se obtiene la expresi\'on deseada:\par\vspace{5mm}
+\color{black}De esta manera se obtiene la expresi\'on deseada:\par\vspace{3mm}
 
 $f(a,b,c,d,e) =  \overline{c}.\overline{e} + \overline{d}.\overline{e} + \overline{b}.c.d.e + a.b.\overline{c}$
-\vspace{8mm}\par
+\vspace{5mm}\par
