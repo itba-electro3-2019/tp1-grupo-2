@@ -2,6 +2,16 @@
 
 # Using assert.sh library: https://github.com/lehmannro/assert.sh
 
+echo "test		| Expected"
+echo "./run 0 1 1	| Res: 0.5 | Ran: 1.5"
+echo "./run 1 1 1	| Res: 0.5 | Ran: 1.5"
+echo "./run 0 1 2	| Res: 0.25 | Ran: 1.75"
+echo "./run 0 a 1	| ERROR"
+echo "./run 0 0 0	| ERROR"
+echo "./run 7 8 0 0 0	| ERROR"
+echo "./run 1 24 127	| Res: 5.87747e-39 | Ran: 1.67772e+07"
+echo "./run 0 27 140	| ERROR"
+
 . assert.sh
 
 assert "echo test" "test"
